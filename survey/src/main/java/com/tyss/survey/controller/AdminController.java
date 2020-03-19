@@ -134,7 +134,7 @@ public class AdminController {
 	}
 	
 	
-	@GetMapping(path ="getting-res",produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(path ="survey-response",produces = MediaType.APPLICATION_JSON_VALUE)
 	public AdminResponse getingResponse()
 	{
 		AdminResponse response=new AdminResponse();

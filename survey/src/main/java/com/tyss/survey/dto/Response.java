@@ -37,7 +37,7 @@ public class Response implements Serializable{
 	private int surveyId;
 
 	
-	@Transient
+	@Column
 	private String userName;
 
 	
