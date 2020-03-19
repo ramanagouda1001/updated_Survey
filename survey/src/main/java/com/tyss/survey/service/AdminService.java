@@ -18,4 +18,8 @@ public interface AdminService {
 	public boolean updateSurvey(Survey survey);
 
 	public boolean addResponse(Response response);
+	
+	
+	
+	public List<Response> fectchResponse();
 }

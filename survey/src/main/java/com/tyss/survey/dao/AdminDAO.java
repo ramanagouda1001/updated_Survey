@@ -18,5 +18,9 @@ public interface AdminDAO {
 	public boolean updateSurvey(Survey survey);
 
 	public boolean addResponse(Response response);
+	
+	
+	
+	public List<Response> fectchResponse();
 
 }

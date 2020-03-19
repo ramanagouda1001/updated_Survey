@@ -126,9 +126,24 @@ public class AdminController {
 		AdminResponse adminResponse = new AdminResponse();
 
 		if (adminServices.addResponse(response)) {
+			System.out.println(response);
 			adminResponse.setError(false);
 			adminResponse.setData("Your Survey is Successfully Recorded");
 		}
 		return adminResponse;
+	}
+	
+	
+	@GetMapping(path ="getting-res",produces = MediaType.APPLICATION_JSON_VALUE)
+	public AdminResponse getingResponse()
+	{
+		AdminResponse response=new AdminResponse();
+		List<Response> list=adminServices.fectchResponse();
+		if(list!=null)
+		{
+			response.setError(false);
+			response.setData(list);
+		}
+		return response;
 	}
 }

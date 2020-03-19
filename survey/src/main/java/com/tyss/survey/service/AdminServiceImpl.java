@@ -45,4 +45,12 @@ public class AdminServiceImpl implements AdminService {
 		return dao.addResponse(response);
 	}
 
+	@Override
+	public List<Response> fectchResponse() {
+		// TODO Auto-generated method stub
+		return dao.fectchResponse();
+	}
+
+	
+
 }
