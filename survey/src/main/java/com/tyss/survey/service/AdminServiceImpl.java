@@ -47,10 +47,6 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	public List<Response> fectchResponse() {
-		// TODO Auto-generated method stub
 		return dao.fectchResponse();
 	}
-
-	
-
 }

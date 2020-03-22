@@ -147,9 +147,19 @@ public class AdminDAOImpl implements AdminDAO {
 	@Override
 	public List<Response> fectchResponse() {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		String jpql = "select r FROM Response r";
+		String jpql = "select r  FROM Response r";
 		Query query = entityManager.createQuery(jpql);
+		@SuppressWarnings("unchecked")
 		List<Response> list = query.getResultList();
 		return list;
 	}
+//	 demo when
+//	@Override
+//	public List<Response> fectchResponse() {
+//		EntityManager entityManager = entityManagerFactory.createEntityManager();
+//		String jpql = "select r.responseId,r.userName,r.surveyName,r.surveyId FROM Response r";
+//		Query query = entityManager.createQuery(jpql);
+//		List<Response> list = query.getResultList();
+//		return list;
+//	}
 }
